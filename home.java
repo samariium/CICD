@@ -4,15 +4,12 @@ public class home {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        double num1 = 10;  // Default value for testing
+        char operator = '+';  // Default operator for testing
+        double num2 = 5;  // Default value for testing
+
         System.out.println("Welcome to the Basic Calculator!");
-        System.out.println("Enter the first number:");
-        double num1 = scanner.nextDouble();
-
-        System.out.println("Enter the operator (+, -, *, /):");
-        char operator = scanner.next().charAt(0);
-
-        System.out.println("Enter the second number:");
-        double num2 = scanner.nextDouble();
+        System.out.println("Using default values: " + num1 + " " + operator + " " + num2);
 
         double result;
 
@@ -31,13 +28,11 @@ public class home {
                     result = num1 / num2;
                 } else {
                     System.out.println("Error: Division by zero is not allowed.");
-                    scanner.close();
                     return;
                 }
                 break;
             default:
                 System.out.println("Error: Invalid operator.");
-                scanner.close();
                 return;
         }
 
